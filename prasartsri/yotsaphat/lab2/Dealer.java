@@ -19,9 +19,9 @@ public class Dealer {
                 String num_clients = args[1];
                 String dealer_gender = args[2];
 
-                System.out.println("Dealer's name:" + dealer_name);
-                System.out.println("Number of clients:" + num_clients );
-                System.out.println("Gender:" + dealer_gender);
+                System.out.println("Dealer's name: " + dealer_name);
+                System.out.println("Number of clients: " + num_clients );
+                System.out.println("Gender: " + dealer_gender);
             }
         }
     
