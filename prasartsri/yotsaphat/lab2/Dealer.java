@@ -5,7 +5,7 @@
  * Dealer's name : <dealer name> 
  * Number of clients : <num_clients> 
  * Gender : <dealer_gender>  
- * Author: Ytsaphat Prasartsri 
+ * Author: Yotsaphat Prasartsri 
  * ID :673040403-7 
  * Sec : 1 
 */ 
