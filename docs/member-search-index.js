@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"coe.java.demos.c4","c":"JavadocDemo","l":"add(int, int)","u":"add(int,int)"},{"p":"coe.java.demos.c4","c":"JavadocDemo","l":"JavadocDemo()","u":"%3Cinit%3E()"},{"p":"coe.java.demos.c4","c":"JavadocDemo","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
