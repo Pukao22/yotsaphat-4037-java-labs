@@ -24,7 +24,7 @@ package prasartsri.yotsaphat.lab2;
  * Last Updated: December 1, 2024
  */
 
-public class PrimitiveDatatype { 
+public class PrimitiveDataType { 
     public static void main(String[] args) {
         
             
