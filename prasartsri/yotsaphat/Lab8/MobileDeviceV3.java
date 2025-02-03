@@ -31,7 +31,9 @@
      // Method to add components to the window (menu items and panels)
      protected void addComponents() {
          super.addComponents();  // Add components from the parent class (MobileDeviceV2)
- 
+         addMenus(); // call addMenus method
+     }
+     protected void addMenus(){
          // Initialize the panels and menu items
          nortPanel = new JPanel();
          nortPanel.setLayout(new BorderLayout());
@@ -93,7 +95,10 @@
          nortPanel.add(menuBar, BorderLayout.NORTH);
          nortPanel.add(fromPanel, BorderLayout.SOUTH);  // Assuming 'fromPanel' is defined elsewhere
          mainPanel.add(nortPanel, BorderLayout.NORTH);
+
      }
+
+
  
      // Method to create and show the GUI window
      public static void createAndShowGUI() {
