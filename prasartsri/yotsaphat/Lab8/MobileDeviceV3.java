@@ -102,9 +102,9 @@
  
      // Method to create and show the GUI window
      public static void createAndShowGUI() {
-         MobileDeviceV3 mdv1 = new MobileDeviceV3("Mobile Device V3");
-         mdv1.addComponents();  // Add components to the window
-         mdv1.setFrameFeatures();  // Set window features (like size, location)
+         MobileDeviceV3 mdv3 = new MobileDeviceV3("Mobile Device V3");
+         mdv3.addComponents();  // Add components to the window
+         mdv3.setFrameFeatures();  // Set window features (like size, location)
      }
  
      // Main method to launch the program
