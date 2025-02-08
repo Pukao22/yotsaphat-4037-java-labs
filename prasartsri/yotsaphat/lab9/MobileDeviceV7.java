@@ -1,83 +1,71 @@
-package prasartsri.yotsaphat.lab9;
+/*
+ * This class extends MobileDeviceV6 and adds additional features such as 
+ * setting default values for fields and displaying an image of the Samsung Galaxy S25 Ultra.
+ * It includes pre-set device information like name, brand, price, and features.
+ * 
+ * Output:
+ * The program shows the Samsung Galaxy S25 Ultra with device details (name, brand, price),
+ * features listed in a text area, and an image of the device.
+ * 
+ * Author: Yotsaphat Prasartsri  
+ * ID: 673040403-7  
+ * Sec: 1  
+ * Last Updated: February 1, 2025
+ */
 
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-import java.awt.*;
-import java.io.IOException;
-import java.awt.image.BufferedImage;
+ package prasartsri.yotsaphat.lab9;
 
-// import prasartsri.yotsaphat.lab9.ReadImage.ReadWindowImage;
-
-public class MobileDeviceV7 extends MobileDeviceV6 {
-    
-    MobileDeviceV7(String title) {
-        super(title);
-            
-    }
-    protected void addComponents(){
-        super.addComponents();
-        fieldName.setText("Samsung Galaxy S25 Ultra");
-        fieldBrand.setText("Samsung");
-        fieldPrice.setText("46,900");
-
-        featureJTextArea.setText("-200MP Camera -1TB Storage -Snapdragon Gen 4 Processor -5000mAh Battery-6.8-inch AMOLED Display -120Hz Refresh Rate -Fast Charging" 
-        .replace("-", "\n-"));
-        rateDevice.setValue(9);
-
-        // ReadImage readImage = new ReadImage();
-        // latestPanel.add(readImage);
-        myImage = new ReadWindowImage("prasartsri/yotsaphat/lab9/images/S25-ultra.jpg");
-        myImage.setSize(new Dimension(10, 10));
-        latestPanel.add(myImage);
-        // readImage.paintComponent("prasartsri/yotsaphat/lab9/images/S25-ultra.jpg");
-        
-
-    }
-    protected ReadWindowImage myImage;
-    // public void paintComponent(String picturename) {
-        
-    // }
-    
+ import javax.swing.SwingUtilities;
+ import java.awt.*;
+ 
+ public class MobileDeviceV7 extends MobileDeviceV6 {
+ 
+     // Constructor that calls the superclass constructor
+     MobileDeviceV7(String title) {
+         super(title);
+     }
+ 
+     // Method to add components to the window
+     protected void addComponents() {
+         super.addComponents(); // Add components from the superclass
+ 
+         // Set pre-defined text values for device fields
+         fieldName.setText("Samsung Galaxy S25 Ultra");  // Set device name
+         fieldBrand.setText("Samsung");  // Set brand name
+         fieldPrice.setText("46,900");  // Set price
+ 
+         // Set the feature text with a list of features for the device
+         featureJTextArea.setText("-200MP Camera -1TB Storage -Snapdragon Gen 4 Processor -5000mAh Battery -6.8-inch AMOLED Display -120Hz Refresh Rate -Fast Charging"
+                 .replace("-", "\n-"));  // Format features with line breaks
+ 
+         // Set the initial value of the rating slider
+         rateDevice.setValue(9);  // Set rating to 9
+ 
+         // Create a ReadImage object to display the device's image
+         myImage = new ReadImage("prasartsri/yotsaphat/lab9/images/S25-ultra.jpg");
+         myImage.setSize(new Dimension(10, 10));  // Set the size of the image
+         latestPanel.add(myImage);  // Add the image to the panel
+ 
+         // Note: The previous code for ReadImage functionality is commented out.
+     }
+ 
+     // Declare a ReadImage object for displaying the device's image
+     protected ReadImage myImage;
+ 
+     // Method to create and display the GUI
      public static void createAndShowGUI() {
-        MobileDeviceV7 mdv7 = new MobileDeviceV7("Mobile Device V7");
-        mdv7.addComponents(); // Add components to the window
-        mdv7.setFrameFeatures(); // Set window features (like size, location)
-    }
-
-    // Main method to launch the program
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI(); // Create and show the GUI window
-            }
-        });
-    }
-    public class ReadWindowImage extends JPanel{
-        BufferedImage img;
-        
-        public void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            g.drawImage(img, 0, 0, this);
-        }
-    
-        public ReadWindowImage() {
-            try {
-                img = ImageIO.read(getClass().getResource("prasartsri/yotsaphat/lab9/images/S25-ultra.jpg"));
-            } catch (IOException e) {
-               e.printStackTrace(System.err);
-            }
-        }
-    
-        public ReadWindowImage(String fileName) {
-            String name = fileName;
-            try {
-                img = ImageIO.read(getClass().getResource(name));
-            } catch (IOException e) {
-               e.printStackTrace(System.err);
-            }
-        }
-    }
-
-}
+         MobileDeviceV7 mdv7 = new MobileDeviceV7("Mobile Device V7");
+         mdv7.addComponents();  // Add components to the window
+         mdv7.setFrameFeatures();  // Set window features like size, location
+     }
+ 
+     // Main method to launch the program
+     public static void main(String[] args) {
+         SwingUtilities.invokeLater(new Runnable() {
+             public void run() {
+                 createAndShowGUI();  // Create and show the GUI window
+             }
+         });
+     }
+ }
+ 
