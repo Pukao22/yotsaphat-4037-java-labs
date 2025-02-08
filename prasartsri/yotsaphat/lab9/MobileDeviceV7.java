@@ -35,14 +35,20 @@
          fieldPrice.setText("46,900");  // Set price
  
          // Set the feature text with a list of features for the device
-         featureJTextArea.setText("-200MP Camera -1TB Storage -Snapdragon Gen 4 Processor -5000mAh Battery -6.8-inch AMOLED Display -120Hz Refresh Rate -Fast Charging"
-                 .replace("-", "\n-"));  // Format features with line breaks
+         featureJTextArea.setText("- 200MP Camera\r\n" + //
+                          "- 1TB Storage\r\n" + //
+                          "- Snapdragon Gen 4 Processor\r\n" + //
+                          "- 5000mAh Battery\r\n" + //
+                          "- 6.8-inch AMOLED Display\r\n" + //
+                          "- 120Hz Refresh Rate\r\n" + //
+                          "- Fast Charging\r\n" + //
+                          "");  
  
          // Set the initial value of the rating slider
          rateDevice.setValue(9);  // Set rating to 9
  
          // Create a ReadImage object to display the device's image
-         myImage = new ReadImage("prasartsri/yotsaphat/lab9/images/S25-ultra.jpg");
+         myImage = new ReadImage("images/S25-ultra.jpg");
          myImage.setSize(new Dimension(10, 10));  // Set the size of the image
          latestPanel.add(myImage);  // Add the image to the panel
  

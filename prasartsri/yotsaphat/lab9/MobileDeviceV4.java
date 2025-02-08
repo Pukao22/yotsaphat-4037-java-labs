@@ -45,13 +45,13 @@
      // Method to set icons for different menu items
      protected void setIcon() {
          nEw.setIcon(new ImageIcon(
-                 getClass().getClassLoader().getResource("prasartsri/yotsaphat/lab9/images/new_icon.png")));
+                 getClass().getClassLoader().getResource("images/new_icon.png")));
          save.setIcon(new ImageIcon(
-                 getClass().getClassLoader().getResource("prasartsri/yotsaphat/lab9/images/save_icon.png")));
+                 getClass().getClassLoader().getResource("images/save_icon.png")));
          open.setIcon(new ImageIcon(
-                 getClass().getClassLoader().getResource("prasartsri/yotsaphat/lab9/images/open_icon.png")));
+                 getClass().getClassLoader().getResource("images/open_icon.png")));
          exit.setIcon(new ImageIcon(
-                 getClass().getClassLoader().getResource("prasartsri/yotsaphat/lab9/images/exit_icon.png")));
+                 getClass().getClassLoader().getResource("images/exit_icon.png")));
      }
  
      // Method to set font sizes for the menu options
