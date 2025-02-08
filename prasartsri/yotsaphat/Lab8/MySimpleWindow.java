@@ -21,7 +21,7 @@
      protected JPanel buttonPanel;
  
      // Constructor that sets the window title
-     MySimpleWindow(String title) {
+    public MySimpleWindow(String title) {
          super(title);
      }
  
@@ -44,7 +44,7 @@
      }
  
      // Method to set up the frame features like closing behavior, visibility, etc.
-     protected void setFrameFeatures() {
+     public void setFrameFeatures() {
          this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Close on exit
          this.setVisible(true);  // Make the window visible
          this.pack();  // Adjust window size to fit its contents

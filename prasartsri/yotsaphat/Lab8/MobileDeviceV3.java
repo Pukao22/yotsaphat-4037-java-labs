@@ -24,7 +24,7 @@
                          black, red, green, blue, f1, f2, f3;  // Menu items for each option
  
      // Constructor that calls the parent constructor and sets the title
-     MobileDeviceV3(String title) {
+    public MobileDeviceV3(String title) {
          super(title);
      }
  
