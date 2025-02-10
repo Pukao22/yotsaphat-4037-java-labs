@@ -30,7 +30,7 @@
      @Override
      public void paintComponent(Graphics g) {
          super.paintComponent(g); // Call the superclass method
-         g.drawImage(img, 0, 0, this); // Draw the image at coordinates (0, 0)
+         g.drawImage(img, 0, 0, img.getWidth()/2,img.getHeight()/2, this); // Draw the image at coordinates (0, 0)
      }
  
      // Default constructor, loads a default image
