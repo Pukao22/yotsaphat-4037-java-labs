@@ -19,14 +19,15 @@
  import java.awt.*;
  
  public class MobileDeviceV7 extends MobileDeviceV6 {
+    protected ReadImage myImage;// Declare a ReadImage object for displaying the device's image
  
      // Constructor that calls the superclass constructor
-     MobileDeviceV7(String title) {
+     public MobileDeviceV7(String title) {
          super(title);
      }
  
      // Method to add components to the window
-     protected void addComponents() {
+     public void addComponents() {
          super.addComponents(); // Add components from the superclass
  
          // Set pre-defined text values for device fields
@@ -55,8 +56,8 @@
          // Note: The previous code for ReadImage functionality is commented out.
      }
  
-     // Declare a ReadImage object for displaying the device's image
-     protected ReadImage myImage;
+     
+     
  
      // Method to create and display the GUI
      public static void createAndShowGUI() {
