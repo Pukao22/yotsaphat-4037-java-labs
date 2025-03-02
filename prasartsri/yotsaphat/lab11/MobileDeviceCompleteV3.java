@@ -45,8 +45,8 @@ public class MobileDeviceCompleteV3 extends MobileDeviceCompleteV2 implements Co
      */
     public void componentResized(ComponentEvent e) {
         Dimension size = this.getSize();
-        JOptionPane.showMessageDialog(null, "Window resized to: Width = " 
-                + size.width + ", Height = " + size.height);
+        JOptionPane.showMessageDialog(null, "Window resized to: " 
+                + size.width + "x" + size.height);
     }
 
     /**
@@ -58,7 +58,7 @@ public class MobileDeviceCompleteV3 extends MobileDeviceCompleteV2 implements Co
     public void componentMoved(ComponentEvent e) {
         Point location = this.getLocation();
         JOptionPane.showMessageDialog(null, "Window moved to: X = " 
-                + location.x + ", Y = " + location.y);
+                + location.x + " Y = " + location.y);
     }
 
     /**
