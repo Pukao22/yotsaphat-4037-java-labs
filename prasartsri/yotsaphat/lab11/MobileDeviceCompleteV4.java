@@ -19,7 +19,7 @@ import java.awt.event.*;
 public class MobileDeviceCompleteV4 extends MobileDeviceCompleteV2 {
     protected JMenu configMenu, color;  // Menu for configuration and color options
     protected JMenuItem customrMI;  // Menu item to open color chooser
-    protected JColorChooser tcc;  // Color chooser for selecting a color
+    protected JColorChooser  tcc;  // Color chooser for selecting a color
 
     /**
      * Constructor for MobileDeviceCompleteV4 that initializes the superclass MobileDeviceCompleteV2 with a title.
@@ -102,7 +102,7 @@ public class MobileDeviceCompleteV4 extends MobileDeviceCompleteV2 {
      * It invokes the createAndShowGUI method on the event dispatch thread.
      */
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() {  
             public void run() {
                 createAndShowGUI();  // Create and show the GUI window
             }

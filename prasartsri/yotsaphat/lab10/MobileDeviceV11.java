@@ -25,7 +25,7 @@ public class MobileDeviceV11 extends MobileDeviceV10 implements ItemListener {
      * 
      * @param title The title of the mobile device window.
      */
-    MobileDeviceV11(String title) {
+    protected MobileDeviceV11(String title) {
         super(title);
     }
 

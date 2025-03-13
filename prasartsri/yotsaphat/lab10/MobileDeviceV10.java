@@ -8,24 +8,29 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.event.*;
 
 /**
- * This program defines the MobileDeviceV10 class, which extends MobileDeviceV9, 
- * and adds additional functionality including handling changes in ratings, 
- * vendor selection from a list, and operating system selection from a combo box. 
- * The program interacts with the user through dialog boxes to display information 
- * about the selected rating, vendor, and operating system. 
- * It also provides the ability to adjust the rating, select a vendor from a list, 
+ * This program defines the MobileDeviceV10 class, which extends MobileDeviceV9,
+ * and adds additional functionality including handling changes in ratings,
+ * vendor selection from a list, and operating system selection from a combo
+ * box.
+ * The program interacts with the user through dialog boxes to display
+ * information
+ * about the selected rating, vendor, and operating system.
+ * It also provides the ability to adjust the rating, select a vendor from a
+ * list,
  * and choose an operating system from a dropdown menu.
  * 
- * Author: Yotsaphat Prasartsri   
- * ID: 673040403-7  
- * Sec: 1  
+ * Author: Yotsaphat Prasartsri
+ * ID: 673040403-7
+ * Sec: 1
  * Last Updated: February 1, 2025
  */
 
 public class MobileDeviceV10 extends MobileDeviceV9 implements ListSelectionListener, ChangeListener {
     
+
     /**
-     * Constructor for MobileDeviceV10 that initializes the superclass MobileDeviceV9 with a title.
+     * Constructor for MobileDeviceV10 that initializes the superclass
+     * MobileDeviceV9 with a title.
      * 
      * @param title The title of the mobile device window.
      */
@@ -71,20 +76,26 @@ public class MobileDeviceV10 extends MobileDeviceV9 implements ListSelectionList
      * @param e The ActionEvent triggered when an operating system is selected.
      */
     public void actionPerformed(ActionEvent e) {
-        super.actionPerformed(e);  // Calls the superclass method to handle other actions
-        String selectedopValue = (String) opComboBox.getSelectedItem();
-        JOptionPane.showMessageDialog(null, "You selected Operating System: " + selectedopValue, "OS Selection",
-                JOptionPane.INFORMATION_MESSAGE);
+        super.actionPerformed(e); // Call the superclass method to handle existing events
+        Object src = e.getSource(); // Get the source of the event
+        if (src == opComboBox) {
+            // Get the selected operating system from the combo box
+            String selectedOpSystem = (String) opComboBox.getSelectedItem();
+            String msg = "You selected Operating System: " + selectedOpSystem;
+            // Show a message dialog with the selected operating system
+            JOptionPane.showMessageDialog(this, msg, "OS Selection", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 
     /**
-     * Adds action listeners to the various components for rating, vendor selection, and OS selection.
+     * Adds action listeners to the various components for rating, vendor selection,
+     * and OS selection.
      */
     public void addListeners() {
         super.addListeners();
-        rateDevice.addChangeListener(this);  // Add change listener for the rating slider
-        inteCampList.addListSelectionListener(this);  // Add list selection listener for the vendor list
-        opComboBox.addActionListener(this);  // Add action listener for the operating system combo box
+        rateDevice.addChangeListener(this); // Add change listener for the rating slider
+        inteCampList.addListSelectionListener(this); // Add list selection listener for the vendor list
+        opComboBox.addActionListener(this); // Add action listener for the operating system combo box
     }
 
     /**
@@ -93,7 +104,7 @@ public class MobileDeviceV10 extends MobileDeviceV9 implements ListSelectionList
     public static void createAndShowGUI() {
         MobileDeviceV10 mdv10 = new MobileDeviceV10("Mobile Device V10");
         mdv10.addComponents(); // Add components to the window
-        mdv10.addListeners();  // Add listeners to the components
+        mdv10.addListeners(); // Add listeners to the components
         mdv10.setFrameFeatures(); // Set window features like size, location
     }
 
